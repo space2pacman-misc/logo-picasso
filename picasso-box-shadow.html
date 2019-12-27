@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Picasso</title>
+</head>
+<body>
+	
+<style>
+	body {
+		text-align: center;
+	}
+
+	.logo {
+		display: inline-flex;
+    	align-items: center;
+	}
+
+	.logo__pic {
+    	width: 300px;
+    	height: 300px;
+    	border-radius: 50%;
+        overflow: hidden;
+    	position: relative;
+	}
+
+	.logo__side {
+	    position: absolute;
+	    top: 0px;
+	    bottom: 0px;
+	    margin: auto;
+	}
+
+	.logo__side--left {
+		left: 0px;
+	}
+
+	.logo__side--right {
+		right: 0px;
+		z-index: 1;
+	}
+
+	.logo__wave {
+	    border-radius: 50%;
+	    width: 1px;
+	    height: 1px;
+	    position: absolute;
+	    top: 0px;
+	    bottom: 0px;
+	    transform: translateX(-50%);
+	    margin: auto;
+	    mix-blend-mode: overlay;
+	}
+
+	.logo__wave--purple {
+		animation: ripplePurple 8s infinite linear;
+	}
+
+	.logo__wave--orange {
+		animation: rippleOrange 8s infinite linear;
+	}
+
+	.logo__wave--1 {
+	    animation-delay: 1s;
+	}
+
+	.logo__wave--2 {
+	    animation-delay: 2s;
+	}
+
+	.logo__wave--3 {
+	    animation-delay: 3s;
+	}
+
+	.logo__wave--4 {
+	    animation-delay: 4s;
+	}
+
+	.logo__wave--5 {
+	    animation-delay: 5s;
+	}
+
+	.logo__wave--6 {
+	    animation-delay: 6s;
+	}
+
+	.logo__wave--7 {
+	    animation-delay: 7s;
+	}
+
+	@keyframes ripplePurple {
+  		0% {
+    		box-shadow: 0 0 0 0 rgba(149, 27, 129, .8);
+  		}
+  		
+  		70% {
+    		box-shadow: 0 0 0 300px rgba(149, 27, 129, 0);
+  		}
+  		
+  		100% {
+      		box-shadow: 0 0 0 0 rgba(149, 27, 129, 0);
+  		}
+	}
+
+	@keyframes rippleOrange {
+  		0% {
+    		box-shadow: 0 0 0 0 rgba(249, 180, 79, .9);
+  		}
+  		
+  		70% {
+    		box-shadow: 0 0 0 300px rgba(249, 180, 79, .1);
+  		}
+  		
+  		/*100% {
+      		box-shadow: 0 0 0 0 rgba(249, 180, 79, 0);
+  		}*/
+  		90% {
+      		box-shadow: 0 0 0 300px rgba(249, 180, 79, 0);
+  		}
+  		100% {
+      		box-shadow: 0 0 0 0 rgba(249, 180, 79, 0);
+  		}
+	}
+</style>
+
+<div class="logo">
+	<div class="logo__pic">
+		<div class="logo__side logo__side--left">
+			<div class="logo__wave logo__wave--purple logo__wave--0"></div>
+			<div class="logo__wave logo__wave--purple logo__wave--1"></div>
+			<div class="logo__wave logo__wave--purple logo__wave--2"></div>
+			<div class="logo__wave logo__wave--purple logo__wave--3"></div>
+			<div class="logo__wave logo__wave--purple logo__wave--4"></div>
+			<div class="logo__wave logo__wave--purple logo__wave--5"></div>
+			<div class="logo__wave logo__wave--purple logo__wave--6"></div>
+			<div class="logo__wave logo__wave--purple logo__wave--7"></div>
+		</div>
+		<div class="logo__side logo__side--right">
+			<div class="logo__wave logo__wave--orange logo__wave--0"></div>
+			<div class="logo__wave logo__wave--orange logo__wave--1"></div>
+			<div class="logo__wave logo__wave--orange logo__wave--2"></div>
+			<div class="logo__wave logo__wave--orange logo__wave--3"></div>
+			<div class="logo__wave logo__wave--orange logo__wave--4"></div>
+			<div class="logo__wave logo__wave--orange logo__wave--5"></div>
+			<div class="logo__wave logo__wave--orange logo__wave--6"></div>
+			<div class="logo__wave logo__wave--orange logo__wave--7"></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
